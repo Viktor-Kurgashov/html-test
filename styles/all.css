@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 80px;
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.outer-wrapper {
+  padding: 0 1.5%;
+}
+
+.centered-wrapper {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.header-medium {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.header-big {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.small-text {
+  font-family: 'Montserrat';
+  font-size: 0.95rem;
+}
+
+.lightblue-background {
+  background: #F4F8FF;
+}
+
+.blue-background {
+  background: #4169C1;
+  color: white;
+}
+
+.input-label {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.text-input {
+  font-family: 'Open Sans';
+  font-size: 0.95rem;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  height: 45px;
+  padding: 0 0.8rem;
+  margin-top: 3px;
+}
+
+.custom-placeholder {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 0.8rem;
+  font-size: 0.95rem;
+  opacity: 0.6;
+  cursor: text;
+}
+
+.orange-button {
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  background: #FD6612;
+  color: white;
+  border: none;
+}
+
+@media screen and (max-width: 960px) {
+  .outer-wrapper {
+    padding: 0 3%;
+  }
+}

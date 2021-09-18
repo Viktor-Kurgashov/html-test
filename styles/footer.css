@@ -1,0 +1,70 @@
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding-bottom: 3%;
+}
+
+
+
+.contacts {
+  flex-basis: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 4% 0;
+}
+
+.contacts-header {
+  font-family: 'Montserrat';
+  flex-basis: 100%;
+  padding-bottom: 18px;
+}
+
+.contacts-param {
+  font-weight: bold;
+  padding-bottom: 14px;
+  flex-basis: 30%;
+  align-self: flex-start;
+}
+.contacts-param:last-of-type {
+  padding: 7px 0 25px;
+  flex-basis: 100%;
+}
+
+.contacts-value {
+  opacity: 0.9;
+  padding-bottom: 14px;
+  flex-basis: 70%;
+}
+.contacts-value + .contacts-value {
+  flex-basis: 100%;
+  padding-left: 30%;
+}
+
+.contacts-icon {
+  margin-right: 25px;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .footer-container {
+    max-height: 422px;
+    padding: 0 3%;
+  }
+  .contacts {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer-container {
+    max-height: 1000px;
+    padding: 0;
+  }
+  .contacts {
+    flex-basis: 100%;
+    padding: 30px 3%;
+  }
+}

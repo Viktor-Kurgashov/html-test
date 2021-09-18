@@ -1,0 +1,46 @@
+.copyright-background {
+  background: #001A33;
+  color: white;
+}
+.copyright {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 80px;
+}
+
+.copyright-text {
+  opacity: 0.5;
+  flex-grow: 1;
+}
+.copyright-link {
+  margin-left: 0.5rem;
+}
+.copyright-link:visited, .copyright-link:link {
+  color: white;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .copyright {
+    align-content: space-evenly;
+    height: 240px;
+    padding: 5px 5%
+  }
+  .copyright-text {
+    flex-basis: 100%;
+  }
+  .copyright-link {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .copyright {
+    height: 150px;
+  }
+  .copyright-link {
+    max-width: 200px;
+  }
+}

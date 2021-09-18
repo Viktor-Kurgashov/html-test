@@ -1,0 +1,49 @@
+.geography-container {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.geography-text {
+  flex-basis: 37%;
+  align-self: center;
+}
+
+.geography-header {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: block;
+}
+
+.geography-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  display: block;
+  margin: 1em 0;
+  padding-right: 20%;
+}
+
+.geography-image-wrapper {
+  flex-basis: 60%;
+  font-size: 0;
+}
+
+.geography-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .geography {
+    padding: 4% 3% 2%;
+  }
+  .geography-text, .geography-image-wrapper {
+    flex-basis: 100%
+  }
+  .geography-image-wrapper {
+    margin-top: 1rem;
+    padding: 0 2.5%;
+  }
+}

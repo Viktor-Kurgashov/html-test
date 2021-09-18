@@ -1,0 +1,161 @@
+.questions-wrapper {
+  border-radius: 0 0 5px 5px;
+  background: white;
+  color: black;
+  position: relative;
+  margin-left: 2%;
+  padding: 0 5% 42px;
+  flex-basis: 66%;
+}
+
+
+.question-cap {
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+.questions-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 24px;
+}
+
+
+.questions {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-areas: 
+    "name comment"
+    "phone comment"
+    "email comment"
+    "checkbox submit";
+  column-gap: 2%;
+}
+.grid-name  { grid-area: name }
+.grid-phone { grid-area: phone }
+.grid-email { grid-area: email }
+.grid-comment { grid-area: comment; }
+
+
+.grid-name > span:last-child, .grid-phone > span:last-child, .grid-email > span:last-child {
+  bottom: 9px;
+}
+.questions-input {
+  border: 1px solid #E7ECF3;
+  background: #EEF2F9;
+  margin-bottom: 9px;
+  display: block;
+}
+.questions-input:focus {
+  border: 1px solid #FD6612;
+}
+
+
+.questions-textarea {
+  padding: 0.6rem 0.8rem;
+  resize: none;
+  height: 86%;
+}
+.texarea-custom-placeholder {
+  height: 86%;
+  top: 23px;
+}
+
+
+.questions-checkbox {
+  position: relative;
+  padding-left: 27px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.removed-checkbox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+}
+.removed-checkbox:checked + .custom-checkbox > .custom-checkbox-dot {
+  visibility: visible;
+}
+
+.custom-checkbox {
+  background: #EEF2F9;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.custom-checkbox-dot {
+  visibility: hidden;
+  background: #4169C1;
+  border-radius: 2px;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  margin: 25%;
+}
+
+.checkbox-text {
+  font-size: 0.95rem;
+}
+.checkbox-text > a:link {
+  color: black;
+}
+
+
+.questions-submit {
+  border-radius: 25px;
+  font-size: 1.4rem;
+  height: 50px;
+  line-height: 40px;
+  grid-area: submit;
+  margin-top: 7px;
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+  .questions-wrapper {
+    flex-basis: 60%;
+    margin-left: 0;
+    padding-bottom: 35px;
+  } 
+  .questions {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "name"
+      "phone"
+      "email"
+      "comment"
+      "submit"
+      "checkbox";
+  }
+  .questions-submit {
+    margin-top: 25px;
+  }
+  .questions-checkbox {
+    margin-top: 15px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .questions-wrapper {
+    flex-basis: 100%;
+    padding: 25px 10% 35px;
+    border-radius: 5px;
+  }
+  .question-cap {
+    height: 0;
+  }
+}
