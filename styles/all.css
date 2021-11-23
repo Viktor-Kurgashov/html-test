@@ -8,6 +8,23 @@ body {
   margin: 0;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -15,12 +32,18 @@ body {
 }
 
 .outer-wrapper {
+  min-width: 320px;
   padding: 0 1.5%;
+}
+
+@media screen and (max-width: 960px) {
+  .outer-wrapper {
+    padding: 0 3%;
+  }
 }
 
 .centered-wrapper {
   max-width: 1200px;
-  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -86,10 +109,4 @@ body {
   background: #FD6612;
   color: white;
   border: none;
-}
-
-@media screen and (max-width: 960px) {
-  .outer-wrapper {
-    padding: 0 3%;
-  }
 }
