@@ -1,4 +1,4 @@
-.page-header-wrapper {
+.fixed-nav-wrapper {
   background: white;
   position: fixed;
   z-index: 10;
@@ -8,50 +8,50 @@
   min-height: 80px;
 }
 
-.page-header {
+.fixed-nav {
   display: flex;
   align-items: center;
   height: 80px;
 }
 
-.page-header__caption {
+.fixed-nav__caption {
   margin-left: 12px;
   padding-bottom: 4px;
 }
 
-.page-header__caption-bold {
+.fixed-nav__caption-bold {
   font-size: 1.1em;
   font-weight: 700;
   height: 1.1em;
   line-height: 1.1em;
 }
 
-.page-header__caption-reg {
+.fixed-nav__caption-reg {
   font-size: 0.95em;
   opacity: 0.75;
   min-height: 0.95em;
   line-height: 0.95em;
 }
 
-.page-header__nav {
+.fixed-nav__nav {
   flex-grow: 1;
   align-self: stretch;
   display: none;
   align-items: stretch;
 }
 
-.page-header__gap-before-nav,
-.page-header__gap-after-nav {
+.fixed-nav__gap-before-nav,
+.fixed-nav__gap-after-nav {
   flex-grow: 0.5;
 }
 
-.page-header__nav-link,
-.page-header__phone {
+.fixed-nav__nav-link,
+.fixed-nav__phone {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
-.page-header__nav-link {
+.fixed-nav__nav-link {
   flex-basis: 20%;
   padding: 0 4px;
   font-size: 0.9rem;
@@ -59,50 +59,50 @@
   line-height: 82px;
 }
 
-.page-header__nav-link:hover {
+.fixed-nav__nav-link:hover {
   background: #4169C1;
   color: white;
 }
 
-.page-header__phone {
+.fixed-nav__phone {
   margin-left: 10px;
   font-size: 1.35em;
 }
 
-.page-header__button {
+.fixed-nav__button {
   width: 40px;
   height: 40px;
   padding: 5px;
   margin-left: 2%;
 }
 
-.page-header__button-stripe {
+.fixed-nav__button-stripe {
   background: black;
   border-radius: 1px;
   margin-top: 8px;
   height: 3px;
 }
 
-.page-header__button-stripe:first-child {
+.fixed-nav__button-stripe:first-child {
   margin-top: 0;
 }
 
 
 
 @media screen and (min-width: 960px) {
-  .page-header__nav {
+  .fixed-nav__nav {
     display: flex;
   }
-  .page-header__gap-before-nav {
+  .fixed-nav__gap-before-nav {
     flex-grow: 0.2;
   }
-  .page-header__button {
+  .fixed-nav__button {
     display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .page-header__phone, .page-header__phone-icon {
+  .fixed-nav__phone, .fixed-nav__phone-icon {
     display: none;
   }
 }

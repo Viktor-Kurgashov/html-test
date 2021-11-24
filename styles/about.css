@@ -43,6 +43,7 @@
 }
 
 .about-image {
+  display: none;
   float: right;
   width: 125%;
 }
