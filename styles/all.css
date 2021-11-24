@@ -8,9 +8,13 @@ body {
   margin: 0;
 }
 
-p, h1 {
+p, h1, h2 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.4rem;
 }
 
 a {
@@ -74,10 +78,6 @@ button {
 .small-text {
   font-family: 'Montserrat';
   font-size: 0.95rem;
-}
-
-.lightblue-background {
-  background: #F4F8FF;
 }
 
 .blue-background {

@@ -1,25 +1,27 @@
-.portfolio-container {
+.portfolio-wrapper {
+  background: #F4F8FF;
+}
+
+.portfolio {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  padding-bottom: 35px;
+  padding: 40px 0;
 }
 
-
-.portfolio-header {
-  text-align: center;
-  padding: 40px 0 30px;
+.portfolio__header {
   flex-basis: 100%;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
-
-.portfolio-arrow-left, .portfolio-arrow-right {
-  cursor: pointer;
-  color: #4169C161;
+.portfolio-arrow-left,
+.portfolio-arrow-right {
+  flex-basis: 6%;
   font-size: 7em;
   line-height: 0.8em;
   height: 1em;
-  flex-basis: 6%;
+  color: #4169C161;
 }
 .portfolio-arrow-left {
   padding-right: 1.5rem;
@@ -28,20 +30,19 @@
   padding-left: 1.5rem;
 }
 
-
-.portfolio-pic-wrapper {
+.portfolio__pic-wrapper {
   font-size: 0;
   flex-basis: 34%;
   align-self: stretch;
 }
-.portfolio-pic-wrapper > img {
+
+.portfolio__pic {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-
-.portfolio-text {
+.portfolio__text {
   flex-basis: 54%;
   margin: 4% 0;
   padding: 30px 2.5%;
@@ -49,72 +50,69 @@
   flex-flow: row wrap;
 }
 
-
-.portfolio-text-header, .portfolio-text-caption, .portfolio-text-list-header {
-  flex-basis: 100%;
-}
 .portfolio-text-header {
+  flex-basis: 100%;
   font-size: 1.2rem;
 }
-.portfolio-text-caption {
-  opacity: 0.9;
-  padding: 0.8rem 25% 1.2rem 0;
-}
 
+.portfolio-text-caption {
+  flex-basis: 75%;
+  margin-top: 12px;
+}
 
 .portfolio-text-list-header {
-  padding-bottom: 0.5em;
+  flex-basis: 100%;
+  margin-top: 20px;
+  padding-bottom: 8px;
 }
+
 .portfolio-text-list-item {
   flex-basis: 50%;
   padding: 0.3em 0;
 }
-
 
 .portfolio-button {
   flex-basis: 65%;
   font-size: 1.4rem;
   height: 50px;
   margin-top: 24px;
-  padding-bottom: 4px;
   border-radius: 25px;
 }
-.portfolio-button:active {
-  transform: scale(98%);
-}
+
 
 
 @media screen and (max-width: 960px) {
-  .portfolio-container {
-    padding: 0 5%;
+  .portfolio {
+    padding-right: 5%;
+    padding-left: 5%;
   }
-  .portfolio-pic-wrapper, .portfolio-text {
+  .portfolio__pic-wrapper,
+  .portfolio__text {
     flex-basis: 100%;
   }
-  .portfolio-text {
+  .portfolio__text {
     padding: 30px 5%;
     margin: 0;
   }
   .portfolio-button {
     flex-basis: 75%;
   }
-  .portfolio-arrow-left {
-    padding-left: 1.5rem;
+  .portfolio-arrow-left,
+  .portfolio-arrow-right {
     flex-basis: 50%;
+    padding: 0 1.5rem;
+  }
+  .portfolio-arrow-left {
     order: 1;
   }
   .portfolio-arrow-right {
-    padding-right: 1.5rem;
     text-align: right;
-    flex-basis: 50%;
     order: 2;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .portfolio-text-list-item {
-    flex-basis: 100%;
-  }
+  .portfolio-text-list-item,
   .portfolio-button {
     flex-basis: 100%;
   }
