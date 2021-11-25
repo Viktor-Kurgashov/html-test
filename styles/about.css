@@ -1,32 +1,43 @@
-.about-container {
+.about-wrapper {
+  background: #F4F8FF;
+  position: relative;
+}
+
+.about {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  padding-bottom: 6.5%;
+  padding-top: 40px;
+  padding-bottom: min(6.5%, 85px);
 }
 
-
 .about-header {
-  padding: 40px 0 30px;
+  padding-bottom: 30px;
   flex-basis: 100%;
 }
 
-.about-text {
+.about-text,
+.about-image-wrapper {
   flex-basis: 50%;
-  padding: 4% 5%;
   font-size: 0;
 }
 
+.about-text {
+  padding: 4% 5%;
+}
+
+.about-image-wrapper {
+  overflow-y: hidden;
+}
+
 .about-title {
-  display: block;
-  padding-bottom: 4%;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
+  padding-bottom: 4%;
 }
 
 .about-description {
-  display: block;
   padding-bottom: 5%;
   opacity: 0.9;
 }
@@ -37,20 +48,15 @@
   max-width: 30%;
 }
 
-.about-image-wrapper {
-  flex-basis: 50%;
-  overflow-y: hidden;
-}
-
 .about-image {
-  display: none;
   float: right;
   width: 125%;
+  height: auto;
 }
 
 
 @media screen and (max-width: 960px) {
-  .about-container {
+  .about {
     padding-bottom: 52%;
   }
   .about-text {
@@ -74,7 +80,7 @@
 
 
 @media screen and (max-width: 640px) {
-  .about-container {
+  .about {
     padding-bottom: 30%;
   }
   .about-text {

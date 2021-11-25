@@ -8,7 +8,6 @@
   flex-basis: 66%;
 }
 
-
 .question-cap {
   background: white;
   border-radius: 5px;
@@ -22,10 +21,8 @@
 .questions-header {
   font-size: 1.2rem;
   font-weight: bold;
-  display: block;
   padding-bottom: 24px;
 }
-
 
 .questions {
   display: grid;
@@ -37,41 +34,48 @@
     "checkbox submit";
   column-gap: 2%;
 }
-.grid-name  { grid-area: name }
-.grid-phone { grid-area: phone }
-.grid-email { grid-area: email }
-.grid-comment { grid-area: comment; }
 
-
-.grid-name > span:last-child, .grid-phone > span:last-child, .grid-email > span:last-child {
-  bottom: 9px;
+.grid-name  {
+  grid-area: name
 }
+
+.grid-phone {
+  grid-area: phone;
+  margin-top: 9px;
+}
+
+.grid-email {
+  grid-area: email;
+  margin-top: 9px;
+}
+
+.grid-comment {
+  grid-area: comment;
+}
+
 .questions-input {
   border: 1px solid #E7ECF3;
   background: #EEF2F9;
-  margin-bottom: 9px;
-  display: block;
 }
+
 .questions-input:focus {
   border: 1px solid #FD6612;
 }
 
-
 .questions-textarea {
   padding: 0.6rem 0.8rem;
+  height: calc(100% - 23px);
   resize: none;
-  height: 86%;
-}
-.texarea-custom-placeholder {
-  height: 86%;
-  top: 23px;
 }
 
+.texarea-custom-placeholder {
+  top: 23px;
+}
 
 .questions-checkbox {
   position: relative;
   padding-left: 27px;
-  margin-top: 7px;
+  margin-top: 16px;
   cursor: pointer;
 }
 .removed-checkbox {
@@ -107,10 +111,6 @@
 .checkbox-text {
   font-size: 0.95rem;
 }
-.checkbox-text > a:link {
-  color: black;
-}
-
 
 .questions-submit {
   border-radius: 25px;
@@ -118,9 +118,8 @@
   height: 50px;
   line-height: 40px;
   grid-area: submit;
-  margin-top: 7px;
+  margin-top: 16px;
 }
-
 
 
 
@@ -139,6 +138,9 @@
       "comment"
       "submit"
       "checkbox";
+  }
+  .grid-comment {
+    margin-top: 9px;
   }
   .questions-submit {
     margin-top: 25px;

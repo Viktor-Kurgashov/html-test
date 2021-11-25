@@ -1,57 +1,52 @@
-.features-container {
+.features {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding-bottom: 35px;
+  padding-top: 40px;
 }
 
 .features-header {
-  padding: 40px 0 30px;
   flex-basis: 100%;
+  padding-bottom: 30px;
 }
 
 .feature {
+  flex-basis: 80%;
   margin-bottom: 2rem;
-  flex-basis: 32%;
 }
 
 .feature-icon-wrapper {
-  float: left;
-  width: 25%;
-  min-height: 100%;
+  margin-bottom: 12px;
+  font-size: 0;
 }
 
 .feature-title {
   padding-bottom: 0.3em;
   font-size: 1.2em;
   font-weight: bold;
-  float: right;
-  width: 75%;
-}
-
-.feature-text {
-  float: right;
-  width: 75%;
 }
 
 
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 640px) {
   .feature {
     flex-basis: 48%;
   }
-  .feature-icon-wrapper {
-    width: 100%;
-    min-height: 0;
-    margin-bottom: 12px;
-  }
-  .feature-title, .feature-text {
-    width: 100%;
-  }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 960px) {
   .feature {
-    flex-basis: 80%;
+    flex-basis: 32%;
+  }
+  .feature-icon-wrapper {
+    float: left;
+    width: 25%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .feature-title,
+  .feature-text {
+    float: right;
+    width: 75%;
   }
 }
